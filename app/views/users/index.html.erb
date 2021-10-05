@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row">
+    <h2>ユーザー一覧</h2>
+  </div>
+  <table class="table table-stripped">
+    <tr>
+      <th>image</th>
+      <th>ユーザー名</th>
+      <th>自己紹介</th>
+      <th>登録日</th>
+    </tr>
+    <% @users.each do |user| %>
+    <tr>
+      <td>Image</td>
+      <td>
+        <%= link_to user_path(user) do %>
+          <%= user.name %>
+        <% end %>
+      </td>
+      <td><%= user.introduction %></td>
+      <td><%= user.created_at %></td>
+    </tr>
+    <% end %>
+  </table>
+</div>
+
+
