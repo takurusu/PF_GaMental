@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row">
+    <h2>投稿一覧</h2>
+  </div>
+  <table class="table table-stripped">
+    <tr>
+      <th>image</th>
+      <th>ユーザー名</th>
+      <th>タイトル</th>
+      <th>本文</th>
+      <th>投稿日</th>
+    </tr>
+    <% @games.each do |game| %>
+    <tr>
+      <td>
+        <%= link_to admin_game_path(game) do %>
+          <%= attachment_image_tag game, :image, :fill, 40, 40, format: 'jpeg' %>
+        <% end %>
+      </td>
+      <td><%= game.user.name %></td>
+      <td><%= game.title %></td>
+      <td><%= game.text %></td>
+      <td><%= game.created_at %></td>
+    </tr>
+    <% end %>
+  </table>
+</div>
+
+
