@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   devise_for :users
   root to: "homes#top"
   resources :users, only: [:index, :show, :edit, :update]
-  resources :games, only: [:index, :new, :create, :show, :edit, :update, :destroy]
+  resources :games, only: [:index, :new, :create, :show, :edit, :update, :destroy] do
+    resources :comments, only: [:create, :destroy]
+  end
 
   devise_for :admins, path: :admin, views: {
     :registrations => 'admins/registrations',

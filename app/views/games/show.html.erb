@@ -20,6 +20,20 @@
       <td><%= @game.created_at %></td>
     </tr>
   </table>
+  <div>
+    <p>コメント件数：<%= @game.comments.count %></p>
+    <% @game.comments.each do |comment| %>
+      <p>Image</p>
+      <%= comment.user.name %>
+      <%= comment.created_at.strftime('%Y/%m/%d') %><%= comment.comment %>
+    <% end %>
+  </div>
+  <div>
+    <%= form_with(model:[@game, @comment], local: true) do |f| %>
+      <%= f.text_area :comment, rows:'5', placeholder: "コメントをここに" %>
+      <%= f.submit "送信する", class: "btn btn-primary btn-sm" %>
+    <% end %>
+  </div>
   <div class="link">
     <%= link_to "編集する", edit_game_path, class: "btn btn-success btn-sm" %>
     <%= link_to "削除する", game_path(@game), method: :delete, class: "btn btn-danger btn-sm" %>
