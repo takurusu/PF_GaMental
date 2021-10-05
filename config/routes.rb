@@ -10,7 +10,7 @@ Rails.application.routes.draw do
     :sessions => 'admins/sessions'
   }
 
-  namespase :admin do
+  namespace :admin do
     resources :users, only: [:index, :show, :edit, :update]
     resources :games, only: [:index, :new, :create, :show, :edit, :update, :destroy]
     root to: "homes#top"
