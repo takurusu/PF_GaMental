@@ -26,7 +26,25 @@
       <p>Image</p>
       <%= comment.user.name %>
       <%= comment.created_at.strftime('%Y/%m/%d') %><%= comment.comment %>
+      <% if comment.user == current_user %>
+      <div>
+        <%= link_to "削除", game_comment_path(comment.game, comment), method: :delete %>
+      </div>
+      <% end %>
     <% end %>
+      <% if @game.favorited_by?(current_user) %>
+        <p>
+          <%= link_to game_favorite_path(@game), method: :delete do %>
+            ♥<%= @game.favorites.count %> いいね
+          <% end %>
+        </p>
+      <% else %>
+        <p>
+          <%= link_to game_favorites_path(@game), method: :post do %>
+            ♥<%= @game.favorites.count %> いいね
+        　<% end %>
+        </p>
+      <% end %>
   </div>
   <div>
     <%= form_with(model:[@game, @comment], local: true) do |f| %>
