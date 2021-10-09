@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :games, only: [:index, :new, :create, :show, :edit, :update, :destroy] do
     resources :favorites, only: [:create, :destroy]
     resources :comments, only: [:create, :destroy]
+  get "search" => "searches#search"
   end
 
   devise_for :admins, path: :admin, views: {
