@@ -1,0 +1,22 @@
+<% if user_signed_in? %>
+<div class="col-md-3">
+  <div>
+    <h2>User info</h2>
+  </div>
+  <div>Image</div>
+  <table class="table table-stripped">
+    <tr>
+      <td>name</td>
+      <td><%= user.name %></td>
+    </tr>
+    <tr>
+      <td>introduction</td>
+      <td><%= user.introduction %></td>
+    </tr>
+  </table>
+  <% if @user.id == current_user.id %>
+    <p><%= link_to "", edit_user_path(user), class: "btn btn-outline-secondary btn-block fas fa-user-cog" %></p>
+    <p><%= link_to "新規投稿", new_game_path, class: "btn btn-success btn-sm" %></p>
+  <% end %>
+</div>
+<% end %>
