@@ -1,24 +1,35 @@
-# README
+# GaMental
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## サイト概要
+ゲームの新着情報や攻略情報など、ゲーム関係の共有したい事を投稿するSNSサイトです。投稿に対してコメントやいいねを付けたりしてユーザー同士で交流することができます。また、気になる内容を検索機能を使って調べることも可能です。
 
-Things you may want to cover:
+### サイトテーマ
+多くの方に楽しいゲームライフを。ゲームで外出自粛を乗り切ろう。
 
-* Ruby version
+### テーマを選んだ理由
+私の趣味がゲームで、ゲームが好きな方にはより楽しめるようなコンテンツを、そうでない方にはゲームの面白さを届けたいという思いから。
+また、コロナウイルスが蔓延している中、自宅にいることが多くなっているのでゲーム関係の需要が高まっていると考えたからです。
 
-* System dependencies
+### ターゲットユーザ
+２０～３０代、男女
 
-* Configuration
+### 主な利用シーン
+プレイ中のゲームの情報を知りたいとき、他のユーザーに情報を共有したいとき。
 
-* Database creation
+## 設計書
+利用規約については下記URLのサイトを参照。
+https://jp.wazap.com/help/terms/
 
-* Database initialization
+## チャレンジ要素一覧
+https://docs.google.com/spreadsheets/d/16DsO-Vr0Mm6pg-7hk6U2RU_9g1s14X6KioesXarhoA4/edit?usp=sharing
 
-* How to run the test suite
+## 開発環境
+- OS：Linux(CentOS)
+- 言語：HTML,CSS,JavaScript,Ruby,SQL
+- フレームワーク：Ruby on Rails
+- JSライブラリ：jQuery
+- IDE：Cloud9
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## 使用素材
+- 外部サービスの画像素材・音声素材を使用した場合は、必ずサービス名とURLを明記してください。
+- 使用しない場合は、使用素材の項目をREADMEから削除してください。
