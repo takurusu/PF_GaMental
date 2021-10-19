@@ -6,6 +6,9 @@ class Admin::GamesController < ApplicationController
 
   def show
     @game = Game.find(params[:id])
+    @user = @game.user.id
+    @comment = Comment.new
+    @favorite = Favorite.new
   end
 
   def edit
@@ -28,6 +31,10 @@ class Admin::GamesController < ApplicationController
 
     def game_params
       params.require(:game).permit(:image, :title, :text)
+    end
+
+    def user_params
+      params.require(:user).permit(:user_id)
     end
 
 end

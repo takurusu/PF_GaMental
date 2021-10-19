@@ -5,6 +5,10 @@
   <%= form_with model: @game, url: admin_game_path, local: true do |f| %>
   <table>
     <tr>
+      <th>image</th>
+      <td><%= f.attachment_field :image %></td>
+    </tr>
+    <tr>
       <th>タイトル</th>
       <td><%= f.text_field :title %></td>
     </tr>

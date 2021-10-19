@@ -4,6 +4,10 @@
   </div>
   <table>
     <tr>
+      <th>プロフィール画像</th>
+      <td><%= attachment_image_tag @user, :image, :fill, 60, 60, fallback: "no_image.jpg" %></td>
+    </tr>
+    <tr>
       <th>名前</th>
       <td><%= @user.name %></td>
     </tr>

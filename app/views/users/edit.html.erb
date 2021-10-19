@@ -5,7 +5,11 @@
   <%= form_with model: @user, local: true do |f| %>
   <table>
     <tr>
-      <th>名前</th>
+      <th>プロフィール画像</th>
+      <td><%= f.attachment_field :image, placeholder: "プロフィール画像" %></td>
+    </tr>
+    <tr>
+      <th>ユーザー名</th>
       <td><%= f.text_field :name %></td>
     </tr>
     <tr>

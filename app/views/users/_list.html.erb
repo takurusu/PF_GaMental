@@ -3,14 +3,14 @@
   <div>
     <h2>User info</h2>
   </div>
-  <div>Image</div>
+  <div><%= attachment_image_tag user, :image, :fill, 60, 60, fallback: "no_image.jpg" %> </div>
   <table class="table table-stripped">
     <tr>
-      <td>name</td>
+      <td>ユーザー名</td>
       <td><%= user.name %></td>
     </tr>
     <tr>
-      <td>introduction</td>
+      <td>自己紹介</td>
       <td><%= user.introduction %></td>
     </tr>
   </table>
