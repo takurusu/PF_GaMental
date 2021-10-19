@@ -18,7 +18,7 @@
     </tr>
     <tr>
       <th>投稿日</th>
-      <td><%= @game.created_at %></td>
+      <td><%= @game.created_at.to_s(:datetime_jp) %></td>
     </tr>
   </table>
   <div class="link">

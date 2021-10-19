@@ -19,7 +19,7 @@
             <% end %>
           </td>
           <td><%= user.introduction %></td>
-          <td><%= user.created_at %></td>
+          <td><%= user.created_at.to_s(:datetime_jp) %></td>
         </tr>
         <% end %>
       </table>

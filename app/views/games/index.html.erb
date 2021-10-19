@@ -21,7 +21,7 @@
           <td><%= game.user.name %></td>
           <td><%= game.title %></td>
           <td><%= game.text %></td>
-          <td><%= game.created_at %></td>
+          <td><%= game.created_at.to_s(:datetime_jp) %></td>
         </tr>
         <% end %>
       </table>
